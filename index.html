@@ -1,45 +1,79 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-        <title>Snake Game</title>
-        <style>
-            
-            canvas{
-                display: block;
-                margin: 0px 410px;
-                
-            }
-
-            html {
-
-                 min-height: 100%; 
-            }
-            body {
-                 background: -webkit-linear-gradient(#93B874, #C9DCB9); 
-                 background: -o-linear-gradient(#93B874, #C9DCB9); 
-                 background: -moz-linear-gradient(#93B874, #C9DCB9); 
-                 background: linear-gradient(#93B874, #C9DCB9); 
-                 background-color: #93B874; 
-            }
-        </style>
-        <body>
-            
-            <marquee style="font-style: oblique;color: rgb(4, 67, 78);" onmouseover="this.stop();"onmouseout="this.start();"><h3>SNAKE GAME - REMIND YOUR DAD'S FIRST PHONE</h3></marquee>
-            <marquee style="color: rgb(214, 23, 141);font-style: italic;" scrolldelay="300" behavior="scroll" direction="left"onmouseover="this.stop();"onmouseout="this.start();"><h4>Created By R.Udaikiran</h4></marquee>
-            <img  src="img/tenor.gif" style="float:left;border-radius:50%;width:200px;height:200px;position: absolute;top:290px;left:40px;">
-            <img  src="img/img.jpg" style="float:right;border-radius:50%;width:200px;height:200px;position:relative;top:200px;right: 40px;">
-            <p id="gameover"></p>
-            
-        </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <style>
+        canvas {
+            display: block;
+            margin: 0px 410px;
+        }
         
-    </head>
-    <canvas id="snake" width="608" height="608"></canvas>
-    <script src="snake.js"></script>
-    
-</html> 
+        .img {
+            float: left;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 290px;
+            left: 40px;
+            display: block;
+        }
+        
+        .img2 {
+            float: right;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            top: 200px;
+            right: 40px;
+            display: block;
+        }
+        
+        html {
+            min-height: 100%;
+        }
+        
+        body {
+            background: -webkit-linear-gradient(#93B874, #C9DCB9);
+            background: -o-linear-gradient(#93B874, #C9DCB9);
+            background: -moz-linear-gradient(#93B874, #C9DCB9);
+            background: linear-gradient(#93B874, #C9DCB9);
+            background-color: #93B874;
+        }
+        
+        @media only screen and (max-width:400px) {
+            .img {
+                display: none;
+            }
+            .img2 {
+                display: none;
+            }
+            canvas {
+                margin: 0 0 0 0;
+            }
+        }
+    </style>
+
+    <body>
+
+        <marquee style="font-style: oblique;color: rgb(4, 67, 78);" onmouseover="this.stop();" onmouseout="this.start();">
+            <h3>SNAKE GAME - REMIND YOUR DAD'S FIRST PHONE</h3>
+        </marquee>
+        <marquee style="color: rgb(214, 23, 141);font-style: italic;" scrolldelay="300" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+            <h4>Created By R.Udaikiran</h4>
+        </marquee>
+        <img src="img/tenor.gif" class="img">
+        <img src="img/img.jpg" class="img2">
+        <p id="gameover"></p>
+
+    </body>
+
+</head>
+<canvas id="snake" width="608" height="608"></canvas>
+<script src="snake.js"></script>
+
+</html>
